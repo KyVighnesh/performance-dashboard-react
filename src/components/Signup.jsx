@@ -45,7 +45,7 @@ const Signup = () => {
         let regexPassword = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,}$/)
 
 
-        if(user.name.length>4 && regexEmail.test(user.email) && regexPassword.test(user.password)) {
+        if(user.name.length>=4 && regexEmail.test(user.email) && regexPassword.test(user.password)) {
 
             setNameError("")
             setEmailError("")
