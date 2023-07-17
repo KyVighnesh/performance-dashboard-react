@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   PieChart,
@@ -19,6 +18,7 @@ import Lottie from "lottie-react"
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
+
 
 
 const Dashboard = () => {
@@ -48,7 +48,7 @@ const Dashboard = () => {
 
         if(toggle == false) {
             setbgColor("black")
-            setFloat("100%")
+            setFloat("85px")
         }
         else {
             setbgColor("white")
@@ -65,7 +65,7 @@ const Dashboard = () => {
     },[])
     
       return (
-        <div style={{backgroundColor:bgColor,height:"94vh",width:"95vw"}}>
+        <div style={{backgroundColor:bgColor,height:"94vh"}}>
           
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -75,11 +75,10 @@ const Dashboard = () => {
   </div>
 </nav>
 
-<div style={{display:'flex',width:"100%",height:"100%",marginTop:"20px"}}>
-          <div className="App" style={{marginTop:"30px",width:"100%",height:"60vh"}}>
+<div style={{display:'flex',width:"100%",height:"100%",boxSizing:"border-box",marginTop:"20px"}}>
+          <div className="App" style={{marginTop:"30px",width:"90%",height:"60vh"}}>
 
-          <ResponsiveContainer
-          width={"99%"}>
+          <ResponsiveContainer>
 
             <BarChart
               
@@ -106,9 +105,9 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
 
-          <div style={{marginLeft:"20px",width:"30vw",display:"flex",flexDirection:"column",alignItems:"center"}}>
+          <div style={{marginLeft:"20px",width:"20%",display:"flex",flexDirection:"column",alignItems:"center"}}>
 
-          <div style={{height:"40%%", width:"40%", borderRadius:"20px",backgroundColor:"silver",cursor:"pointer"}} onClick = {onClickToggle}>
+          <div style={{height:"38px", width:"8vw", borderRadius:"20px",backgroundColor:"silver",cursor:"pointer"}} onClick = {onClickToggle}>
             <button style={{height:"100%",width:"40%",borderRadius:"20px",marginLeft:move,transition:"linear 0.5s"}}>
 
             </button>
